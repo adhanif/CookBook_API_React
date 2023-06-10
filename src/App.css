@@ -1,0 +1,125 @@
+
+body{
+    background-image: url('https://images.alphacoders.com/238/238803.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1300px;
+    width: auto;
+    
+}
+.recipe-cards {
+    display: flex;
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+    /* grid-gap: 20px; */
+    background-color: transparent !important;
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+    height: 700px;
+  }
+  
+  
+  .recipe-section {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .CardName{
+    color: rgb(255, 255, 255) !important;
+    border: none;
+    text-align: center !important;
+  }
+  
+  .Card-Img {
+    
+    height: 550px ;
+    margin: 0px 15px 0px 15px;
+    border: transparent;
+    border-radius: 3% !important;
+  }
+  .ShowMore{
+    width: 50%;
+    height: 35em;
+   
+  }
+  
+  .Carousel{
+    color: white;
+    background-color: transparent;
+    
+  }
+  
+  .RecipeInfo{
+    display: flex;
+    flex-direction: column;
+  }
+  ul{
+    background-color: rgba(108, 106, 84, 0.36);
+    color: rgb(255, 253, 253);
+    padding: 20px;
+    padding-left: 10px;
+    
+  }
+  .RecImg{
+    height: 100%;
+    width: auto;
+    max-height: fit-content;
+    
+    border-top: solid rgb(242, 232, 89);
+    border-right: solid rgb(242, 232, 89);
+    border-bottom: solid rgb(242, 232, 89);
+    border-radius: 0px 50px 50px 0px;
+  }
+  .ingredients{
+    height: 100%;
+    border-top: solid rgb(242, 232, 89);
+    border-left: solid rgb(242, 232, 89);
+    border-bottom: solid rgb(242, 232, 89);
+    border-radius: 50px 0px 0px 50px;
+
+  }
+
+  .CardBody{
+    height: 150px;
+    
+  }
+  
+  .RecipeBody{
+    display: flex;
+    flex-direction: row;
+    padding-top: 30px;
+    height: 38rem;
+    padding: 30px;
+    
+  }
+  .RecName{
+    
+    justify-content: center;
+    color: rgb(242, 232, 89);
+  }
+  .RecMethod{
+    background-color: rgba(108, 106, 84, 0.36);
+    color: rgb(255, 255, 255);
+    padding: 30px;
+    border:solid  rgb(242, 232, 89);
+    border-radius: 50px; 
+  }
+  .List-Cards{
+    display: flex;
+    flex-direction: row;
+    width: 90% !important;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .BodyPart{
+    display: flex ;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
