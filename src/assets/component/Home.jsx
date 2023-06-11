@@ -24,7 +24,7 @@ function Home() {
   return (
     <div>
       <Container>
-        <Carousel variant="dark" className="mb-5">
+        <Carousel variant="dark" className="Carousel-margin">
           {recipes.map((recipe) => (
             <Carousel.Item key={recipe.sys.id}>
               <div
@@ -34,7 +34,7 @@ function Home() {
                 }}
               ></div>
               <Carousel.Caption>
-                <h5 style={{ color: "white" }}>{recipe.fields.recipeName}</h5>
+                <h2 style={{ color: "white" }}>{recipe.fields.recipeName}</h2>
               </Carousel.Caption>
             </Carousel.Item>
           ))}
@@ -42,7 +42,7 @@ function Home() {
       </Container>
 
       <Container>
-        <Row xs={1} md={3} className="g-5 mb-5">
+        <Row xs={1} md={3} className="g-5 cards-margin">
           {recipes.map((recipe) => (
             <Col key={recipe.sys.id}>
               <Card>
