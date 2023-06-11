@@ -7,7 +7,7 @@ export default function FormReview() {
   return (
     // style={{ display: "block", width: 700, padding: 30 }}
     <div>
-      <h4 className="text-center text-light mb-4">Feedback and Reviews</h4>
+      <h1 className="text-center text-light mb-4">Feedback and Reviews</h1>
       <Form>
         <Form.Group className="mb-3">
           {/* <Form.Label>Enter your full name:</Form.Label> */}
@@ -26,9 +26,9 @@ export default function FormReview() {
         </Form.Group>
         <Form.Control
           as="textarea"
-          rows="3"
+          rows="4"
           name="address"
-          className="mb-3"
+          className="mb-5"
           placeholder="After trying this recipe, what do you think?  *"
         />
         <div className="d-flex justify-content-center">
