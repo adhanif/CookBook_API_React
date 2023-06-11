@@ -46,16 +46,17 @@ body{
     border-radius: 3% !important;
   }
   .ShowMore{
-    width: 50%;
-    height: 35em;
-   
+    /* width: 50%;
+    height: 35em; */
+    color: white;
+    text-decoration: none;
   }
   
-  .Carousel{
+  /* .Carousel{
     color: white;
     background-color: transparent;
     
-  }
+  } */
   
   .RecipeInfo{
     display: flex;
@@ -72,19 +73,42 @@ body{
     height: 100%;
     width: auto;
     max-height: fit-content;
-    
-    border-top: solid rgb(242, 232, 89);
+    /* border-top: solid rgb(242, 232, 89);
     border-right: solid rgb(242, 232, 89);
-    border-bottom: solid rgb(242, 232, 89);
+    border-bottom: solid rgb(242, 232, 89); */
     border-radius: 0px 50px 50px 0px;
   }
   .ingredients{
     height: 100%;
-    border-top: solid rgb(242, 232, 89);
+    /* border-top: solid rgb(242, 232, 89);
     border-left: solid rgb(242, 232, 89);
-    border-bottom: solid rgb(242, 232, 89);
-    border-radius: 50px 0px 0px 50px;
+    border-bottom: solid rgb(242, 232, 89); */
+    border-radius: 50px 50px 50px 5%;
+    padding: 30px;
+  }
 
+  .RecipeBody{
+    display: flex;
+    flex-direction: row;
+    /* padding-top: 30px; */
+    height: 38rem;
+    /* padding: 30px; */
+    border-radius: 50px 50px 50px 50px;
+    border:solid  #e3e2df;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+  }
+
+  .Row-ing{
+    border-radius: 50px 50px 50px 50px;
+    border:solid  #e3e2df;
+    margin-bottom: 2rem;
+  }
+
+  .RecipeImg{
+    height: 500rem;
+    width: 1000px;
+    border-radius: 50px 50px 50px 50px;
   }
 
   .CardBody{
@@ -92,24 +116,17 @@ body{
     
   }
   
-  .RecipeBody{
-    display: flex;
-    flex-direction: row;
-    padding-top: 30px;
-    height: 38rem;
-    padding: 30px;
-    
-  }
+  
   .RecName{
     
     justify-content: center;
-    color: rgb(242, 232, 89);
+    color: #e3e2df;
   }
   .RecMethod{
     background-color: rgba(108, 106, 84, 0.36);
     color: rgb(255, 255, 255);
     padding: 30px;
-    border:solid  rgb(242, 232, 89);
+    border:solid  #e3e2df;
     border-radius: 50px; 
   }
   .List-Cards{
@@ -127,3 +144,30 @@ body{
     width: 100%;
     justify-content: space-between;
   }
+
+  .card-image-wrapper {
+    height: 300px; 
+    overflow: hidden; 
+  }
+  .card-image {
+    width: 100%; 
+    height: 100%; 
+    
+  }
+
+  .custom-navbar {
+    background-color: rgb(0 0 0 / 32%); 
+  }
+
+  .carousel-image {
+    height: 30rem;
+    background-size:contain;
+    background-position:center;
+    background-repeat: no-repeat;
+    margin-bottom: 7rem;
+    margin-top: 3rem;
+  }
+  .custom-bar{
+    text-decoration: none;
+  }
+

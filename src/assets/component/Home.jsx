@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { client } from "./Client";
 import Carousel from "react-bootstrap/Carousel";
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
+import { Button, Row, Col, Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./../../../src/App.css";
 
@@ -23,54 +23,57 @@ function Home() {
 
   return (
     <div>
-      <Carousel
-        prevLabel="Next"
-        nextLabel="Previous"
-        className="Carousel mt-5 mb-5"
-      >
-        {recipes.map((recipe) => (
-          <Carousel.Item key={recipe.sys.id}>
-            <Card className="recipe-cards">
-              <Link className="ShowMore" to={`/recipes/${recipe.sys.id}`}>
-                <Card.Img
-                  className="Card-Img"
-                  src={recipe.fields.image?.fields?.file?.url}
-                  alt={recipe.fields.recipeName}
-                />
-              </Link>
-              <Card.Body className="CardBody">
-                <Card.Title className="CardName">
-                  {recipe.fields.recipeName}
-                </Card.Title>
-              </Card.Body>
-            </Card>
-          </Carousel.Item>
-        ))}
-      </Carousel>
-      <div className="List-Cards">
-        {recipes.map((recipe) => (
-          <Card key={recipe.sys.id} style={{ width: "20rem", height: "30rem" }}>
-            <Card.Img
-              className="List-Card-Img"
-              src={recipe.fields.image?.fields?.file?.url}
-              alt={recipe.fields.recipeName}
-            ></Card.Img>
-            <Card.Body>
-              <div className="BodyPart">
-                <Card.Title className="">{recipe.fields.recipeName}</Card.Title>
-                {recipe.fields.vegan && (
-                  <img
-                    src="https://styles.redditmedia.com/t5_5vpaif/styles/communityIcon_l12iq2pwpui81.png"
-                    style={{ height: "70px", width: "auto" }}
+      <Container>
+        <Carousel variant="dark" className="mb-5">
+          {recipes.map((recipe) => (
+            <Carousel.Item key={recipe.sys.id}>
+              <div
+                className="carousel-image"
+                style={{
+                  backgroundImage: `url(${recipe.fields.image?.fields?.file?.url})`,
+                }}
+              ></div>
+              <Carousel.Caption>
+                <h5 style={{ color: "white" }}>{recipe.fields.recipeName}</h5>
+              </Carousel.Caption>
+            </Carousel.Item>
+          ))}
+        </Carousel>
+      </Container>
+
+      <Container>
+        <Row xs={1} md={3} className="g-5 mb-5">
+          {recipes.map((recipe) => (
+            <Col key={recipe.sys.id}>
+              <Card>
+                <div className="card-image-wrapper">
+                  <Card.Img
+                    className="card-image"
+                    variant="top"
+                    // src={recipe.fields.image?.fields?.file?.url}
+                    style={{
+                      backgroundImage: `url(${recipe.fields.image?.fields?.file?.url})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center center",
+                    }}
                   />
-                )}
-              </div>
-              <Card.Text>Contains: {recipe.fields.calory} calories</Card.Text>
-              <Button variant="primary">Go somewhere</Button>
-            </Card.Body>
-          </Card>
-        ))}
-      </div>
+                </div>
+                <Card.Body className="text-center">
+                  <Card.Title>{recipe.fields.recipeName}</Card.Title>
+                  <Card.Text>
+                    contains {recipe.fields.calory} calories!
+                  </Card.Text>
+                  <Button variant="dark" className="mb-2 mt-2">
+                    <Link className="ShowMore" to={`/recipes/${recipe.sys.id}`}>
+                      Read more
+                    </Link>
+                  </Button>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </Container>
     </div>
   );
 }

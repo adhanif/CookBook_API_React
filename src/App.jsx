@@ -27,8 +27,8 @@ function App() {
   return (
     <>
       <NavBar />
-      <HeaderImage recipes={recipes} />
-      <NavLink to="/">Home</NavLink>
+      <HeaderImage />
+      {/* <NavLink to="/">Home</NavLink> */}
       {/* <nav>
         <NavLink to="/">Home</NavLink>
         {recipes &&
