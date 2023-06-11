@@ -27,7 +27,7 @@ function App() {
 
   return (
     <>
-      <nav>
+      {/* <nav>
         <NavLink to="/">Home</NavLink>
         {recipes &&
           recipes.map((recipe) => {
@@ -38,7 +38,8 @@ function App() {
             );
           })}
 
-      </nav>
+      </nav> */}
+      <br />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/recipes/:id" element={<RecipesAll />} />
