@@ -1,24 +1,31 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { client } from "./Client";
+import "./headerImage.css";
 
 export default function HeaderImage({ recipes }) {
-  console.log(recipes);
-  //recipe.fields.image.fields.file.url
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % recipes.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [recipes]);
+
   return (
-    <div>
-      {recipes && (
-        <div>
-          {recipes.map((recipe) => {
-            return (
-              <img
-                key={recipe.sys.id}
-                src={recipe.fields.image.fields.file.url}
-                alt="Recipe"
-              />
-            );
-          })}
-        </div>
+    <div className="image-container">
+      {recipes && recipes.length > 0 && (
+        <>
+          <img
+            src={recipes[currentImageIndex].fields.image.fields.file.url}
+            alt="Recipe"
+          />
+          <div className="image-text">
+            {recipes[currentImageIndex].fields.title}
+          </div>
+        </>
       )}
     </div>
   );
