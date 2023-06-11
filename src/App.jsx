@@ -4,7 +4,12 @@ import RecipesAll from "./assets/component/RecipesAll";
 import Home from "./assets/component/Home";
 import NotFound from "./assets/component/NotFound";
 import { client } from "./assets/component/Client";
+
+import About from "./assets/component/About";
+
+
 import Footer from "./assets/component/Footer";
+
 import NavBar from "./assets/component/NavBar";
 import "./App.css";
 
@@ -44,7 +49,11 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
 
+        <About/>
+
+
       <Footer />
+
     </>
   );
 }
