@@ -25,6 +25,7 @@
     "react-icons": "^4.9.0",
     "react-rating": "^2.0.5",
     "react-router-dom": "^6.12.1",
+    "react-social-icons": "^5.15.0",
     "styled-components": "^5.3.11"
   },
   "devDependencies": {

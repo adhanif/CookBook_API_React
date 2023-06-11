@@ -4,6 +4,7 @@ import RecipesAll from "./assets/component/RecipesAll";
 import Home from "./assets/component/Home";
 import NotFound from "./assets/component/NotFound";
 import { client } from "./assets/component/Client";
+import About from "./assets/component/About";
 
 import NavBar from "./assets/component/NavBar";
 import HeaderImage from "./assets/component/HeaderImage";
@@ -45,6 +46,7 @@ function App() {
         <Route path="/recipes/:id" element={<RecipesAll />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+        <About/>
     </>
   );
 }

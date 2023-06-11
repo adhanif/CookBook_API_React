@@ -1,0 +1,29 @@
+.social-icons .facebook-icon {
+  fill: #038cfd; /* Facebook color */
+  margin-right: 8px; /* Adjust the margin between icons */
+}
+.social-icons .twitter-icon {
+  fill: #1DA1F2; /* Twitter color */
+  margin-right: 8px; /* Adjust the margin between icons */
+}
+.social-icons .instagram-icon {
+  fill: linear-gradient(to right, #405DE6, #5851DB); /* Instagram gradient color */
+  margin-right: 8px; /* Adjust the margin between icons */
+}
+.social-icons .youtube-icon {
+  fill: #038cfd; /* YouTube color */
+  margin-right: 8px; /* Adjust the margin between icons */
+}
+.social-icons .facebook-icon:hover,
+.social-icons .twitter-icon:hover,
+.social-icons .instagram-icon:hover,
+.social-icons .youtube-icon:hover {
+  transform: scale(1.3);
+}
+
+
+  
+  
+  
+  
+  
