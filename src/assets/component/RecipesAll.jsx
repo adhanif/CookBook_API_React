@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { client } from "./Client";
 import { Button, Row, Col, Container } from "react-bootstrap";
+import FormReview from "./FormReview";
 import "./../../../src/App.css";
 
 export default function RecipesAll() {
@@ -57,7 +58,11 @@ export default function RecipesAll() {
               {formatMethods(recipe.recipeMethods)}
             </ol>
           </div>
-          {/* <p className="row">kalories: {recipe.calory}</p> */}
+          <Row className="mt-5 justify-content-center">
+            <Col lg="6">
+              <FormReview />
+            </Col>
+          </Row>
         </Container>
       )}
     </div>

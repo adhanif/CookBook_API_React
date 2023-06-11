@@ -67,7 +67,7 @@ export default function NavBar() {
             </Button>
             <Button
               variant="outline-light"
-              className="mt-3 mt-lg-0 mb-lg-0 mb-3"
+              className="mt-3 mt-lg-0 mb-lg-0 mb-3 "
             >
               Signup
             </Button>
