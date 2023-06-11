@@ -4,9 +4,10 @@ import RecipesAll from "./assets/component/RecipesAll";
 import Home from "./assets/component/Home";
 import NotFound from "./assets/component/NotFound";
 import { client } from "./assets/component/Client";
-
+import Footer from "./assets/component/Footer";
 import NavBar from "./assets/component/NavBar";
 import HeaderImage from "./assets/component/HeaderImage";
+
 import "./App.css";
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
     <>
       <NavBar />
       <HeaderImage />
+
       {/* <NavLink to="/">Home</NavLink> */}
       {/* <nav>
         <NavLink to="/">Home</NavLink>
@@ -45,6 +47,8 @@ function App() {
         <Route path="/recipes/:id" element={<RecipesAll />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+
+      <Footer />
     </>
   );
 }
