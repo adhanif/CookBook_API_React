@@ -1,94 +1,70 @@
-// import React, { useState, useEffect } from "react";
-// import { useParams } from "react-router-dom";
-// import { client } from "./Client";
-
-// export default function RecipesAll() {
-//   const [recipe, setRecipe] = useState([]);
-//   const { id } = useParams();
-
-//   useEffect(() => {
-//     client
-//       .getEntry(id)
-      
-//       .then((response) => {
-        
-//         setRecipe(response.fields);
-//       })
-//       .catch((err) => {
-//         console.log(err);
-//       });
-
-//   }, [id]);
-
-//   return (
-//     <div>
-//       {recipe && (
-//         <div>
-//           <h1 key={recipe.id}>{recipe.recipeName}</h1>
-//           <img key={recipe.id} src={recipe.image?.fields?.file?.url} alt="Recipe" />
-//           <p key={recipe.id}>{recipe.ingredients}</p>
-//           <p key={recipe.id}>{recipe.recipeMethods}</p>
-//           <p key={recipe.id}>kalories= {recipe.calory}</p>
-//         </div>
-//       )}
-//     </div>
-//   );
-// }
-
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { client } from "./Client";
-import "./../../../src/App.css"
+import { Button, Row, Col, Container } from "react-bootstrap";
+import FormReview from "./FormReview";
+import "./../../../src/App.css";
 
 export default function RecipesAll() {
   const [recipe, setRecipe] = useState(null);
   const { id } = useParams();
 
   useEffect(() => {
-    client.getEntry(id).then((response) => {
-      setRecipe(response.fields);
-    }).catch((err) => {
-      console.log(err);
-    });
+    client
+      .getEntry(id)
+      .then((response) => {
+        setRecipe(response.fields);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, [id]);
 
   const formatIngredients = (ingredients) => {
-    console.log(ingredients)
-    return ingredients.split("\n").map((ingredient, index) => (
-      <li key={index}>{ingredient.trim()}</li>
-    ));
+    return ingredients
+      .split("\n")
+      .map((ingredient, index) => <li key={index}>{ingredient.trim()}</li>);
   };
 
- 
   const formatMethods = (methods) => {
     return methods.split("\n").map((method, index) => {
-          return <li key={index}>{method.trim()}</li>;
-  });
+      return <li key={index}>{method.trim()}</li>;
+    });
   };
 
-  return  (
+  return (
     <div>
       {recipe && (
-        <div className="container">
-          <h1 className="row RecName">{recipe.recipeName}</h1>
-          <div className="RecipeBody col-12">
-            <ul className="col-5 ingredients">
-            <h3>Ingredients:</h3>
-              {formatIngredients(recipe.ingredients)}
-            </ul>
-            <img className="col-7 RecImg" src={recipe.image?.fields?.file?.url} alt="Recipe" />
-          </div>
- 
+        <Container>
+          <h1 className="row RecName mb-5 mt-5 ">{recipe.recipeName}</h1>
+          <Row className="justify-content-center g-0 Row-ing">
+            <Col lg="8" className="text-center">
+              <img
+                src={recipe.image?.fields?.file?.url}
+                alt="Recipe"
+                className="RecipeImg img-fluid "
+              />
+            </Col>
+            <Col lg="4">
+              <ul className=" ingredients">
+                <h3 className="text-center mb-4 ">Ingredients:</h3>
+                {formatIngredients(recipe.ingredients)}
+              </ul>
+            </Col>
+          </Row>
           <div className="col-12 RecMethod ">
             <ol className="methods">
-              <h3>Method:</h3>
-            {formatMethods(recipe.recipeMethods)}
+              <h3 className="text-center mb-4 ">Method:</h3>
+              {formatMethods(recipe.recipeMethods)}
             </ol>
           </div>
-          <p className="row">kalories: {recipe.calory}</p>
-        </div>
+          <Row className="mt-5 justify-content-center">
+            <Col lg="6">
+              <FormReview />
+            </Col>
+          </Row>
+        </Container>
       )}
     </div>
   );
-  
 }

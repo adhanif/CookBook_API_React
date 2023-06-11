@@ -5,17 +5,16 @@ import Home from "./assets/component/Home";
 import NotFound from "./assets/component/NotFound";
 import { client } from "./assets/component/Client";
 
-
+import NavBar from "./assets/component/NavBar";
+import HeaderImage from "./assets/component/HeaderImage";
 import "./App.css";
 
 function App() {
   const [recipes, setRecipes] = useState();
 
-
-
   useEffect(() => {
     client
-      
+
       .getEntries()
       .then((response) => {
         setRecipes(response.items);
@@ -27,6 +26,9 @@ function App() {
 
   return (
     <>
+      <NavBar />
+      <HeaderImage />
+      {/* <NavLink to="/">Home</NavLink> */}
       {/* <nav>
         <NavLink to="/">Home</NavLink>
         {recipes &&
@@ -37,20 +39,14 @@ function App() {
               </NavLink>
             );
           })}
-
       </nav> */}
-      <br />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/recipes/:id" element={<RecipesAll />} />
-        //
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <>
-      </>
     </>
   );
 }
 
 export default App;
-
