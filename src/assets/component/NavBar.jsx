@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Routes, Route, NavLink } from "react-router-dom";
 
 export default function NavBar() {
   return (
@@ -24,6 +25,7 @@ export default function NavBar() {
             </IconButton>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               News
+              <NavLink to="/">Home</NavLink>
             </Typography>
             <Button color="inherit">Login</Button>
           </Toolbar>

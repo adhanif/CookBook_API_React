@@ -1,9 +1,13 @@
 
+*{
+  margin: 0px;
+  
+}
 body{
-    background-image: url('https://images.alphacoders.com/238/238803.jpg');
+    background: url('https://images.alphacoders.com/238/238803.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 1300px;
+    height: auto;
     width: auto;
     
 }

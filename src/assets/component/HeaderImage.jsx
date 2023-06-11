@@ -3,13 +3,13 @@ import { useParams } from "react-router-dom";
 import { client } from "./Client";
 
 export default function HeaderImage({ recipes }) {
-  console.log(recipes);
+  // console.log(recipes);
   //recipe.fields.image.fields.file.url
   return (
     <div>
       {recipes && (
         <div>
-          {recipes.map((recipe) => {
+          {/* {recipes.map((recipe) => {
             return (
               <img
                 key={recipe.sys.id}
@@ -17,7 +17,7 @@ export default function HeaderImage({ recipes }) {
                 alt="Recipe"
               />
             );
-          })}
+          })} */}
         </div>
       )}
     </div>

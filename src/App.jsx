@@ -12,11 +12,9 @@ import "./App.css";
 function App() {
   const [recipes, setRecipes] = useState();
 
-
-
   useEffect(() => {
     client
-      
+
       .getEntries()
       .then((response) => {
         setRecipes(response.items);
@@ -30,8 +28,8 @@ function App() {
     <>
       <NavBar />
       <HeaderImage recipes={recipes} />
-
-      <nav>
+      <NavLink to="/">Home</NavLink>
+      {/* <nav>
         <NavLink to="/">Home</NavLink>
         {recipes &&
           recipes.map((recipe) => {
@@ -41,21 +39,14 @@ function App() {
               </NavLink>
             );
           })}
-
-      </nav>
+      </nav> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/recipes/:id" element={<RecipesAll />} />
-        //
         <Route path="*" element={<NotFound />} />
       </Routes>
-
-      <>
-      </>
-
     </>
   );
 }
 
 export default App;
-
