@@ -36,8 +36,8 @@ export default function RecipesAll() {
     <div>
       {recipe && (
         <Container>
-          <h1 className="row RecName mb-5 mt-5 ">{recipe.recipeName}</h1>
-          <Row className="justify-content-center g-0 Row-ing">
+          <h1 className="row RecName mb-5 mt-5">{recipe.recipeName}</h1>
+          <Row className="justify-content-center g-0 Row-ing mb-5">
             <Col lg="8" className="text-center">
               <img
                 src={recipe.image?.fields?.file?.url}
@@ -52,13 +52,13 @@ export default function RecipesAll() {
               </ul>
             </Col>
           </Row>
-          <div className="col-12 RecMethod ">
+          <div className="col-12 RecMethod margin-bot-form">
             <ol className="methods">
               <h3 className="text-center mb-4 ">Method:</h3>
               {formatMethods(recipe.recipeMethods)}
             </ol>
           </div>
-          <Row className="mt-5 justify-content-center">
+          <Row className="justify-content-center margin-bot-form">
             <Col lg="6">
               <FormReview />
             </Col>

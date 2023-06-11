@@ -160,14 +160,33 @@ body{
   }
 
   .carousel-image {
-    height: 30rem;
+    height: 35rem;
     background-size:contain;
     background-position:center;
     background-repeat: no-repeat;
     margin-bottom: 7rem;
     margin-top: 3rem;
   }
+
   .custom-bar{
     text-decoration: none;
   }
 
+  ul.list-inline li.list-inline-item a {
+  text-decoration: none;
+  color: white;
+}
+
+.margin-bot-form{
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.cards-margin{
+
+  margin-bottom: 10rem;
+}
+.Carousel-margin{
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+}
