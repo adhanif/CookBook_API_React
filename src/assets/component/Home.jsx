@@ -7,6 +7,7 @@ import { Button, Row, Col, Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./../../../src/App.css";
 
+
 function Home() {
   const [recipes, setRecipes] = useState([]);
 
