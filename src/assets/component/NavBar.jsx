@@ -10,7 +10,6 @@ import {
 } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { BiSearch } from "react-icons/bi"; // Importing the BiSearch icon from react-icons
-
 export default function NavBar() {
   const [recipes, setRecipes] = useState([]);
 

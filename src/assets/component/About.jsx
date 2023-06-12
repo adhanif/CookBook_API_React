@@ -7,7 +7,7 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
 
 export default function About() {
     return (
-        <Container fluid className='AboutContainer  p-5 my-5'>
+        <Container fluid className='AboutContainer  p-5 mt-5'>
       <Row>
         <Col md={6} className='About'>
           <Image src="https://myfoodbook.com.au/sites/all/themes/custom/mfb/images/mfb-logo-sml.png" className='logo' rounded />
